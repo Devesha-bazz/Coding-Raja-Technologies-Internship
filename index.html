@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume Builder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Professional Resume Builder</h1>
+
+    <!-- Template Selector -->
+    <div class="form-group">
+      <label for="template">Choose a Template:</label>
+      <select class="form-control" id="template">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <!-- Add more template options as needed -->
+      </select>
+    </div>
+
+    <form id="resumeForm">
+      <!-- Personal Information Section -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <h2>Education</h2>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="degree">Degree:</label>
+          <input type="text" class="form-control" id="degree" name="degree" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="university">University:</label>
+          <input type="text" class="form-control" id="university" name="university" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="stream">Stream:</label>
+          <input type="text" class="form-control" id="stream" name="stream" required>
+        </div>
+      </div>
+
+      <!-- Achievements Section -->
+      <h2>Achievements</h2>
+      <div class="form-group">
+        <label for="achievements">Enter Achievements:</label>
+        <textarea class="form-control" id="achievements" name="achievements" rows="3"></textarea>
+      </div>
+
+      <!-- Work Experience Section -->
+      <h2>Work Experience</h2>
+      <div class="form-group">
+        <label for="experience">Enter Work Experience:</label>
+        <textarea class="form-control" id="experience" name="experience" rows="3"></textarea>
+      </div>
+
+      <!-- Skills Section -->
+      <h2>Skills</h2>
+      <div class="form-group">
+        <label for="skills">Enter Skills (comma-separated):</label>
+        <input type="text" class="form-control" id="skills" name="skills">
+      </div>
+
+      <!-- ... (existing form fields) ... -->
+
+      <button type="button" class="btn btn-primary" onclick="generateResume()">Generate Resume</button>
+
+      <!-- Download Options -->
+      <div class="form-row mt-3">
+        <div class="form-group col-md-6">
+          <label for="downloadFormat">Download as:</label>
+          <select class="form-control" id="downloadFormat">
+            <option value="pdf">PDF</option>
+            <option value="jpg">JPG</option>
+            <option value="png">PNG</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <button type="button" class="btn btn-success" onclick="downloadResume()">Download Resume</button>
+        </div>
+      </div>
+
+      <!-- Preview Mode -->
+      <div class="mt-5">
+        <h2>Preview Mode</h2>
+        <div id="resumePreview" class="preview-container"></div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
