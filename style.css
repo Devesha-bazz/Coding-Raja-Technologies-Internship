@@ -1,0 +1,66 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #ff4d4d; /* Red */
+}
+
+.btn-primary, .btn-success {
+  background-color: #66cc99; /* Greenish */
+  border: none;
+}
+
+#resumePreview {
+  border: 2px solid #66cc99;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.preview-container {
+  border: 2px solid #66cc99;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.card {
+  border: 2px solid #66cc99;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #ff4d4d; /* Red */
+}
+
+.card-subtitle {
+  color: #808080; /* Gray */
+}
+
+.card-text {
+  color: #333333; /* Dark Gray */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Customize template selector and download format dropdowns */
+#template, #downloadFormat {
+  background-color: #e6e6e6; /* Light Gray */
+  border: 1px solid #cccccc;
+}
